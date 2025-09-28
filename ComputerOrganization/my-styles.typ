@@ -10,8 +10,6 @@
   cjk: "Noto Serif CJK SC",
 )
 
-#show link: underline
-
 #let qt(body) = {
   block(
     stroke: 0.5pt,
