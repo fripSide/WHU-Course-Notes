@@ -1,15 +1,9 @@
-#set page("a4")
-#set heading(numbering: "1.")
+#import "my-styles.typ": *
+#show link: it => underline(text(fill: blue)[#it.body])
 
 
-#let font = (
-  main: "IBM Plex Serif",
-  mono: "IBM Plex Mono",
-  cjk: "Noto Serif CJK SC",
-)
 
-
-updated: 2025-09-12
+updated: 2025-09-29
 
 
 
@@ -39,3 +33,18 @@ updated: 2025-09-12
 
 
 #highlight[提交期限: 2025-09-30]
+
+== 作业3
+
+第三章：课后习题（需要交到邮箱）\
+P88-89,第3，6，9题 \
+P93，第24题
+
+#highlight[提交期限: 2025-10-10]
+
+额外建议练习题（不需要提交，自行掌握）：\
+计组-第03章.pdf（https://www.jianguoyun.com/p/DY9QSyYQ5-SiBxjg5IkGIAA）\
+选择题：1-6， 18-22， \
+大题: 13/14
+
+

@@ -1,4 +1,6 @@
 #import "my-styles.typ": *
+#show link: it => underline(text(fill: blue)[#it.body])
+
 
 updated: 2025-09-22
 
@@ -21,3 +23,6 @@ updated: 2025-09-22
   $ = -Y_(n-1) × 2^(n-1) + sum_(i=0)^(n-2) (Y_i × 2^i) $
 
 ]
+
+== 2. 浮点数的舍入规则  
+
