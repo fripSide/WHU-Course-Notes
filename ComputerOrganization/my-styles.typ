@@ -19,3 +19,7 @@
     [#body]
   )
 }
+
+#show link: it => {
+  underline(emph(text(fill: blue, it)))
+}
