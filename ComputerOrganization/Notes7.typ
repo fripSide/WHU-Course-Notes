@@ -14,41 +14,7 @@ https://github.com/darklife/darkriscv/tree/master
 
 == 1. 需要掌握的常见指令   
 
-#link("https://msyksphinz-self.github.io/riscv-isadoc/")[RISCV Intruction Set]
-
-可查阅上面链接，来看每条指令是怎么实现的：
-#qt[
-  addi rd,rs1,imm   ->   x[rd] = x[rs1] + sext(immediate)
-
-  注：sext -> sign extension, 即按照带符号位补码来解析立即数  
-
-
-  slti rd,rs1,imm -> x[rd] = x[rs1] $<$s sext(immediate) \
-  按照有符号数比较
-
-
-  sltiu rd,rs1,imm -> x[rd] = x[rs1] $<$u sext(immediate) \
-  按照无符号数比较
-
-]
-解读指令的时候，rd寄存器是指dest（destination，目标操作数）寄存器，rs1/rs2是指src (source，源操作数)寄存器，即：\
-rd = rs1 op rs2
-
-
-#qt[
-指令的功能可以用 寄存器传送语言（register transfer language, RTL）来描述（教材P162 5.1.1节）：
-
-R[r] 表示寄存器r对应的值 \
-M[addr] 表示存储单元addr保存的内存值 \
-M[PC] PC对应的地址的内存值 \
-M[R[r]] 寄存器r对应的值所在的地址的内存值 \
-SEXT[imm] 表示对立即数进行符号扩展(左边补充符号位得到32位补码) \
-ZEXT[imm] 左边用0扩展到32位 \
-$<-$ 将右边的数据保存到左边   
-]
-
-
-下面附上RV32I全部指令的含义： \
+RV32I全部指令的含义： \
 https://github.com/jameslzhu/riscv-card \
 #link("https://github.com/jameslzhu/riscv-card/releases/download/latest/riscv-card.pdf")[PDF下载链接]
 

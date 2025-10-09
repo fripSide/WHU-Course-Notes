@@ -107,7 +107,33 @@ addi rd,rs1,imm   ->   x[rd] = x[rs1] + sext(imm) \
 
 
   zext/ZEXT -> zero extension, 用0在左边来补充立即数到32/64位
+
+
+
+  slti rd,rs1,imm -> x[rd] = x[rs1] $<$s sext(immediate) \
+  按照有符号数比较
+
+
+  sltiu rd,rs1,imm -> x[rd] = x[rs1] $<$u sext(immediate) \
+  按照无符号数比较
 ]
+
+解读指令的时候，rd寄存器是指dest（destination，目标操作数）寄存器，rs1/rs2是指src (source，源操作数)寄存器，即：\
+rd = rs1 op rs2
+
+
+#qt[
+指令的功能可以用 寄存器传送语言（register transfer language, RTL）来描述（教材P162 5.1.1节）：
+
+R[r] 表示寄存器r对应的值 \
+M[addr] 表示存储单元addr保存的内存值 \
+M[PC] PC对应的地址的内存值 \
+M[R[r]] 寄存器r对应的值所在的地址的内存值 \
+SEXT[imm] 表示对立即数进行符号扩展(左边补充符号位得到32位补码) \
+ZEXT[imm] 左边用0扩展到32位 \
+$<-$ 将右边的数据保存到左边   
+]
+
 
 - 编译和查看代码片段，反编译的指令：\
 #link("https://godbolt.org/")[godbolt在线编译器]  
