@@ -10,3 +10,6 @@ Notes5:
 Notes-8:
 - 写c到riscv汇编的对应例子  
 - 补充程序交叉编译，安装riscv-gnu-toolchain, 演示编译链接，演示function call
+
+Noteds-9 到 Notes-14 需要补充。需要在11月中旬补充完。
+
